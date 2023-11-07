@@ -1,0 +1,33 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: space-around;
+    margin: 16px;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 16px;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+}
+
+.option {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
