@@ -17,11 +17,7 @@ export default function Slide() {
       <main>
         <Header />
         <BasicSlider />
-        <div className={styles.buttonWrapper}>
-          {category.map((message: string) => (
-            <CategoryButton message={message} />
-          ))}
-        </div>
+
         <div className={styles.contentWrapper}>
           {contents.map((content) => (
             <ContentsCard content={content} />
