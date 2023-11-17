@@ -12,23 +12,23 @@ import styles from "./page.module.css";
 import { contents, category } from "../../lib/contents";
 
 export default function Slide() {
-    return (
-        <div className={styles.wrapper}>
-            <main>
-                <Header />
-                <BasicSlider />
-                <div className={styles.buttonWrapper}>
-                    {category.map((message: string) => (
-                        <CategoryButton message={message} />
-                    ))}
-                </div>
-                <div className={styles.contentWrapper}>
-                    {contents.map((content) => (
-                        <ContentsCard content={content} />
-                    ))}
-                </div>
-                <Footer />
-            </main>
+  return (
+    <div className={styles.wrapper}>
+      <main>
+        <Header />
+        <BasicSlider />
+        <div className={styles.buttonWrapper}>
+          {category.map((message: string) => (
+            <CategoryButton message={message} />
+          ))}
         </div>
-    );
+        <div className={styles.contentWrapper}>
+          {contents.map((content) => (
+            <ContentsCard content={content} />
+          ))}
+        </div>
+        <Footer />
+      </main>
+    </div>
+  );
 }
