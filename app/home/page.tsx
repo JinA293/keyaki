@@ -20,7 +20,7 @@ export default function Slide() {
 
         <div className={styles.contentWrapper}>
           {contents.map((content) => (
-            <ContentsCard content={content} />
+            <ContentsCard content={content} key={content.title} />
           ))}
         </div>
         <Footer />
