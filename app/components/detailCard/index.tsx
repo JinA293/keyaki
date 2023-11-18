@@ -2,6 +2,7 @@
 
 import { Data } from "@/lib/contents";
 import Footer from "../Footer";
+import Image from "next/image";
 
 type TProps = {
   circleCard: Data;
@@ -65,7 +66,7 @@ const Introduction: React.FC<TProps> = ({ circleCard }) => (
             borderRadius: "10px",
           }}
         >
-          <img
+          <Image
             src={circleCard.src}
             style={{
               width: "100%",
@@ -73,6 +74,7 @@ const Introduction: React.FC<TProps> = ({ circleCard }) => (
               aspectRatio: "unset",
               textAlign: "center",
             }}
+            alt={"制作物画像"}
           />
         </div>
       </div>
