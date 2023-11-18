@@ -76,16 +76,18 @@ const Introduction: React.FC<TProps> = ({ circleCard }) => (
           />
         </div>
       </div>
-      <div
-        style={{
-          fontSize: "25px",
-          paddingTop: "20px",
-          textAlign: "left",
-          width: "80%",
-        }}
-      >
-        {circleCard.subTitle}
-      </div>
+      {
+        <div
+          style={{
+            fontSize: "25px",
+            paddingTop: "20px",
+            textAlign: "left",
+            width: "80%",
+          }}
+        >
+          {circleCard.subTitle}
+        </div>
+      }
     </div>
     <Footer />
   </div>

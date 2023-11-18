@@ -23,14 +23,13 @@ export default function BasicSlider() {
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
-      breakpoints={slideSettings}
-      slidesPerView={"auto"}
+      slidesPerView={1}
       centeredSlides={true}
       loop={true}
       speed={1000}
       autoplay={{
         delay: 2500,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
       }}
       navigation
       pagination={{
@@ -40,6 +39,18 @@ export default function BasicSlider() {
         crossFade: true,
       }}
       // className={styles.slideWrapper}
+      breakpoints={{
+        // when window width is >= 640px
+        640: {
+          width: 640,
+          slidesPerView: 1,
+        },
+        // when window width is >= 768px
+        768: {
+          width: 768,
+          slidesPerView: 2,
+        },
+      }}
     >
       {contents.map((content: any, index: number) => (
         <SwiperSlide key={index}>
@@ -48,17 +59,34 @@ export default function BasicSlider() {
               style={{
                 overflow: "hidden",
                 padding: "20px 20px", // 上下にパディングを追加
-                backgroundColor: "#F19DC0", // 背景色を設定
+                backgroundColor: "#F19DC0",
+                display: "flex", // 横方向に要素を並べる
+                justifyContent: "center",
               }}
             >
-              <Image
-                src={content.src}
-                width={600}
-                height={300}
-                alt="Slider Image"
-                loading="eager"
-                style={{ paddingBottom: "10px" }}
-              />
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Image
+                  src={content.src}
+                  objectFit="cover"
+                  objectPosition="center"
+                  width={450}
+                  height={200}
+                  alt="Slider Image"
+                  loading="eager"
+                  style={{
+                    paddingBottom: "10px",
+                  }}
+                />
+              </div>
             </div>
           </Link>
         </SwiperSlide>

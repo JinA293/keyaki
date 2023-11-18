@@ -1,44 +1,60 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Slide from "./home/page";
+"use client";
 
-export default function Home() {
+import Introduction from "@/app/components/detailCard";
+import { contents } from "@/lib/contents";
+import { useRouter } from "next/navigation";
+
+// import { useRouter, usePathname } from "next/navigation";
+// import Header from "../../components/Header";
+// import Footer from "../../components/Footer";
+
+// import { contents } from "../../../lib/contents";
+// import { ContentCard } from "@/app/components/ContentsCard";
+
+// export default function Page() {
+//   const router = useRouter();
+//   const pathname = usePathname();
+//   // URLからproductNameを抽出するためには、pathnameを解析する
+//   const productName = pathname.split("/").pop();
+//   const content = contents.find((content) => content.title === productName);
+
+//   return (
+//     <div>
+//       <Header />
+//       <h1>{productName}</h1>
+//       <img src={`/basicSlider/${productName}.jpg`} width={300} height={200} />
+//       <button onClick={() => router.push("/home")}>Click Me</button>
+//       <ContentCard content={content} />
+//       <Footer />
+//     </div>
+//   );
+// }
+
+export default function AboutDetailPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const circle = contents.find((circle) => circle.href === params.slug);
+  const router = useRouter();
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-    </main>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
+      <button
+        style={{
+          marginTop: "300px",
+          width: "200px",
+          height: "50px",
+          fontSize: "20px",
+          backgroundColor: "#F19DC0",
+          borderRadius: "10px", // ボタンの角を丸くする
+        }}
+        onClick={() => router.push("/home")}
+      >
+        見る！
+      </button>
+    </div>
   );
 }
