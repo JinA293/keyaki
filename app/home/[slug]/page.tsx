@@ -3,6 +3,7 @@
 import Introduction from "@/app/components/detailCard";
 import { contents } from "@/lib/contents";
 import { useRouter } from "next/navigation";
+import React, { useState, useEffect } from "react";
 
 // import { useRouter, usePathname } from "next/navigation";
 // import Header from "../../components/Header";
@@ -37,15 +38,28 @@ export default function AboutDetailPage({
 }) {
   const circle = contents.find((circle) => circle.href === params.slug);
   const router = useRouter();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  if (!circle) {
-    // 該当するCircleが見つからない場合のエラーメッセージ
-    return <div>Circleが見つかりません</div>;
-  }
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        width: "100%",
+      }}
     >
       <Introduction circleCard={circle} />
       <button
