@@ -1,14 +1,11 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 import Link from "next/link";
+import { Data } from "@/lib/contents";
 
-type Props = [
-  content: {
-    contentsrc: string;
-    title: string;
-    subTitle: string;
-  }
-];
+type Props = {
+  content: Data;
+};
 export default function ContentsCard({ content }: Props) {
   return (
     <div

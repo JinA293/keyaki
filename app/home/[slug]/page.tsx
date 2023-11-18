@@ -5,31 +5,7 @@ import { contents } from "@/lib/contents";
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
-// import { useRouter, usePathname } from "next/navigation";
-// import Header from "../../components/Header";
-// import Footer from "../../components/Footer";
-
-// import { contents } from "../../../lib/contents";
-// import { ContentCard } from "@/app/components/ContentsCard";
-
-// export default function Page() {
-//   const router = useRouter();
-//   const pathname = usePathname();
-//   // URLからproductNameを抽出するためには、pathnameを解析する
-//   const productName = pathname.split("/").pop();
-//   const content = contents.find((content) => content.title === productName);
-
-//   return (
-//     <div>
-//       <Header />
-//       <h1>{productName}</h1>
-//       <img src={`/basicSlider/${productName}.jpg`} width={300} height={200} />
-//       <button onClick={() => router.push("/home")}>Click Me</button>
-//       <ContentCard content={content} />
-//       <Footer />
-//     </div>
-//   );
-// }
+type TProps = {};
 
 export default function AboutDetailPage({
   params,
