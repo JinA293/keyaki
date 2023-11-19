@@ -68,12 +68,15 @@ const Introduction: React.FC<TProps> = ({ circleCard }) => (
         >
           <Image
             src={circleCard.src}
-            style={{
-              width: "100%",
-              height: "auto",
-              aspectRatio: "unset",
-              textAlign: "center",
-            }}
+            // style={{
+            //   width: "100%",
+            //   height: "auto",
+            //   aspectRatio: "unset",
+            //   textAlign: "center",
+            // }}
+            layout={"responsive"}
+            width={1000}
+            height={800}
             alt={"制作物画像"}
           />
         </div>

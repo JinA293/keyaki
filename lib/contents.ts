@@ -93,4 +93,34 @@ export const contents: Data[] = [
     subTitle: "Peach.Tech現代表の過去が丸わかりのポートフォリオです",
     href: "product6",
   },
+  {
+    src: "/basicSlider/product7.png",
+    title: "AuGAME",
+    subTitle: "ゲームを通して科学を学べるゲームです",
+    href: "product7",
+  },
+  {
+    src: "/basicSlider/product8.png",
+    title: "Henkenyzer",
+    subTitle: "Peach.Tech元代表の自信作!",
+    href: "product8",
+  },
+  {
+    src: "/basicSlider/product9.png",
+    title: "質問の里",
+    subTitle: "エンジニア間での交流を目的としたwebアプリケーションです",
+    href: "product9",
+  },
+  {
+    src: "/basicSlider/product10.png",
+    title: "Shiftan",
+    subTitle: "シフト管理効率化を目的として作ったwebアプリです",
+    href: "product10",
+  },
+  {
+    src: "/basicSlider/product11.png",
+    title: "めんたつ",
+    subTitle: "学生エンジニアのピッチコンテスト、技育展に出展したwebアプリです",
+    href: "product11",
+  },
 ];
