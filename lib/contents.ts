@@ -96,7 +96,8 @@ export const contents: Data[] = [
   {
     src: "/basicSlider/product7.png",
     title: "AuGAME",
-    subTitle: "ゲームを通して科学を学べるゲームです",
+    subTitle:
+      "Unityを使ってスイカゲームのようなゲームを作りました。システムはほとんど同じですが、コンボシステムを導入してみたりgame overの判定条件を変えたりとオリジナリティを出すため新しい要素も加えました。",
     href: "product7",
   },
   {

@@ -14,7 +14,7 @@ const Introduction: React.FC<TProps> = ({ circleCard }) => (
   >
     <div
       style={{
-        fontSize: "65px",
+        fontSize: "40px",
         fontWeight: "bold",
         marginLeft: "30px",
         paddingTop: "30px",
